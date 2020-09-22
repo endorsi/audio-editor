@@ -20,8 +20,12 @@ sr, x = read(r"D:\Engineering_1\venv\sound_music\top.mp3")
 print(x.shape)
 print(x[1000:1020])
 
+# slows down
 #x = np.repeat(x,repeats=2,axis=0)
+
+# speeds up
 x = np.delete(x, list(range(0, x.shape[0], 7)), axis=0)
+
 #x = np.array([i-0.05 for i in x])
 
 
